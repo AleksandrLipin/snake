@@ -1,16 +1,18 @@
 from point import Point
 
 class HorizontalLine(Point):
-    def __init__(self,new_list):
-        self.new_list = new_list
-        self.new_list = []
-        p1 = Point(4,4,'*')
-        p2 = Point(5,4,'*')
-        p3 = Point(6,4,'*')
-        self.new_list.append(p1)
-        self.new_list.append(p2)
-        self.new_list.append(p3)
+    def __init__(self,x_left,x_right,y,sym):
+        # self.point_list = point_list
+        self.x_left = x_left
+        self.x_right = x_right
+        self.y = y
+        self.sym = sym
+
+        self.point_list = []
+        for x in range(self.x_left,self.x_right):
+            p = Point(x,self.y,self.sym)
+            self.point_list.append(p)
 
     def draw(self):
-        for p in self.new_list:
+        for p in self.point_list:
             print p.draw()

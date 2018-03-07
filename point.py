@@ -8,3 +8,4 @@ class Point:
         return self.x,self.y,self.sym
 
 
+
