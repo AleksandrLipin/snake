@@ -8,10 +8,12 @@ class VerticalLine(Point):
         self.sym = sym
 
         self.point_list = []
-        for y in range( self.y_up, self.self.y_down ):
+        for y in range( self.y_up, self.y_down + 1 ):
             p = Point( self.x, y, self.sym )
             self.point_list.append(p)
 
     def draw(self):
         for p in self.point_list:
             print p.draw()
+
+# some comment
